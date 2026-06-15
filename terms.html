@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,60 +34,255 @@
     margin-bottom: 15px;
     text-align: justify;
   }
+
+  /* --- تنسيقات أزرار اللغة --- */
+  .lang-switcher {
+    text-align: center;
+    margin-bottom: 30px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+  }
+  .lang-btn {
+    background: white;
+    border: 2px solid #0056b3;
+    color: #0056b3;
+    padding: 8px 20px;
+    margin: 0 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  .lang-btn:hover {
+    background: #e6f0fa;
+  }
+  .lang-btn.active {
+    background: #0056b3;
+    color: white;
+  }
+  
+  /* --- إخفاء وإظهار النصوص --- */
+  .content-section {
+    display: none;
+  }
+  .content-section.active {
+    display: block;
+    animation: fadeIn 0.5s;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
 </style>
 </head>
 <body>
 
 <div class="container">
-  <h1>Terms of Service of Al-Sanea Al-Hirafi (الصانع الحرفي)</h1>
-  <p><strong>Effective Date:</strong> June 2026</p>
 
-  <h2>1. Acceptance of Terms</h2>
-  <p>By using the Al-Sanea Al-Hirafi application, you agree to comply with these Terms of Service. If you do not agree with these terms, please do not use the application.</p>
+  <!-- أزرار تغيير اللغة -->
+  <div class="lang-switcher">
+    <button class="lang-btn" onclick="changeLanguage('ar')">العربية</button>
+    <button class="lang-btn" onclick="changeLanguage('fr')">Français</button>
+    <button class="lang-btn active" onclick="changeLanguage('en')">English</button>
+  </div>
 
-  <h2>2. Use of the Application</h2>
-  <p>You may use the application only for personal, professional, and lawful purposes. You must not use it for any illegal, harmful, or unauthorized activities. The application serves solely as a platform to connect clients with artisans.</p>
+  <!-- ========================================== -->
+  <!-- ENGLISH CONTENT (Default)                  -->
+  <!-- ========================================== -->
+  <div id="content-en" class="content-section active" dir="ltr">
+    <h1>Terms of Service of Al-Sanea Al-Hirafi (الصانع الحرفي)</h1>
+    <p><strong>Effective Date:</strong> June 2026</p>
 
-  <h2>3. User Account</h2>
-  <p>You are responsible for maintaining the confidentiality of your login credentials and for all activities that occur under your account. The application utilizes a dual-mode account system (Artisan/Client), and you are responsible for your conduct and the accuracy of the information provided in both modes.</p>
+    <h2>1. Acceptance of Terms</h2>
+    <p>By using the Al-Sanea Al-Hirafi application, you agree to comply with these Terms of Service. If you do not agree with these terms, please do not use the application.</p>
 
-  <h2>4. User Content and Communication</h2>
-  <p>You are solely responsible for the data, work requests, and messages (text and audio) you submit or share within the application. We act only as a facilitator for communication between artisans and clients and decline any responsibility for disputes, quality of work, or agreements made between users.</p>
-  <p>You agree to communicate respectfully and not to share any inappropriate, offensive, or illegal content through the built-in chat system.</p>
+    <h2>2. Use of the Application</h2>
+    <p>You may use the application only for personal, professional, and lawful purposes. You must not use it for any illegal, harmful, or unauthorized activities. The application serves solely as a platform to connect clients with artisans.</p>
 
-  <h2>5. Advertising</h2>
-  <p>The application may display advertisements (such as banners and interstitial ads) provided by third-party services.</p>
+    <h2>3. User Account</h2>
+    <p>You are responsible for maintaining the confidentiality of your login credentials and for all activities that occur under your account. The application utilizes a dual-mode account system (Artisan/Client), and you are responsible for your conduct and the accuracy of the information provided in both modes.</p>
 
-  <h2>6. Intellectual Property</h2>
-  <p>The design, features, and underlying software of the application are the exclusive property of MOUJAHID ABDERRAHMAN and are protected by applicable laws. However, all user-generated content, including profile data, work requests, and chat content, remains the exclusive property of the user. You may not copy, modify, or distribute any part of the application's proprietary software without prior authorization.</p>
+    <h2>4. User Content and Communication</h2>
+    <p>You are solely responsible for the data, work requests, and messages (text and audio) you submit or share within the application. We act only as a facilitator for communication between artisans and clients and decline any responsibility for disputes, quality of work, or agreements made between users.</p>
+    <p>You agree to communicate respectfully and not to share any inappropriate, offensive, or illegal content through the built-in chat system.</p>
 
-  <h2>7. Service Availability</h2>
-  <p>We do not guarantee that the application will always be available, uninterrupted, or error-free. Maintenance operations, updates, or technical issues may affect the availability of the service.</p>
+    <h2>5. Advertising</h2>
+    <p>The application may display advertisements (such as banners and interstitial ads) provided by third-party services.</p>
 
-  <h2>8. Disclaimer of Warranties</h2>
-  <p>The application is provided on an "as is" and "as available" basis without any warranties of any kind, either express or implied. We do not guarantee the quality, safety, or legality of the services offered by artisans through the platform.</p>
+    <h2>6. Intellectual Property</h2>
+    <p>The design, features, and underlying software of the application are the exclusive property of MOUJAHID ABDERRAHMAN and are protected by applicable laws. However, all user-generated content, including profile data, work requests, and chat content, remains the exclusive property of the user. You may not copy, modify, or distribute any part of the application's proprietary software without prior authorization.</p>
 
-  <h2>9. Limitation of Liability</h2>
-  <p>In no event shall we be liable for any direct, indirect, incidental, or consequential damages arising from the use or inability to use the application, or from any interactions or transactions between users.</p>
+    <h2>7. Service Availability</h2>
+    <p>We do not guarantee that the application will always be available, uninterrupted, or error-free. Maintenance operations, updates, or technical issues may affect the availability of the service.</p>
 
-  <h2>10. Termination</h2>
-  <p>We reserve the right to suspend or terminate your access to the application at any time, without notice, in the event of a violation of these Terms.</p>
+    <h2>8. Disclaimer of Warranties</h2>
+    <p>The application is provided on an "as is" and "as available" basis without any warranties of any kind, either express or implied. We do not guarantee the quality, safety, or legality of the services offered by artisans through the platform.</p>
 
-  <h2>11. Governing Law and Jurisdiction</h2>
-  <p>These Terms are governed by the laws of the Kingdom of Morocco. Any dispute arising from the use of the application shall be subject to the exclusive jurisdiction of the Moroccan courts.</p>
+    <h2>9. Limitation of Liability</h2>
+    <p>In no event shall we be liable for any direct, indirect, incidental, or consequential damages arising from the use or inability to use the application, or from any interactions or transactions between users.</p>
 
-  <h2>12. Changes to the Terms</h2>
-  <p>We may update these Terms from time to time. Changes will be communicated to you within the application or through other appropriate means.</p>
+    <h2>10. Termination</h2>
+    <p>We reserve the right to suspend or terminate your access to the application at any time, without notice, in the event of a violation of these Terms.</p>
 
-  <h2>13. Privacy Policy</h2>
-  <p>Your use of the application is also governed by our Privacy Policy, which is incorporated into these Terms by reference. Please review it to understand our data practices.</p>
+    <h2>11. Governing Law and Jurisdiction</h2>
+    <p>These Terms are governed by the laws of the Kingdom of Morocco. Any dispute arising from the use of the application shall be subject to the exclusive jurisdiction of the Moroccan courts.</p>
 
-  <h2>14. Contact</h2>
-  <p>MOUJAHID ABDERRAHMAN (Independent Developer)   
+    <h2>12. Changes to the Terms</h2>
+    <p>We may update these Terms from time to time. Changes will be communicated to you within the application or through other appropriate means.</p>
 
-  Email: <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a></p>
+    <h2>13. Privacy Policy</h2>
+    <p>Your use of the application is also governed by our Privacy Policy, which is incorporated into these Terms by reference. Please review it to understand our data practices.</p>
+
+    <h2>14. Contact</h2>
+    <p>MOUJAHID ABDERRAHMAN (Independent Developer)  
+
+    Email: <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a></p>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- ARABIC CONTENT                             -->
+  <!-- ========================================== -->
+  <div id="content-ar" class="content-section" dir="rtl">
+    <h1>شروط استخدام تطبيق الصانع الحرفي</h1>
+    <p><strong>تاريخ السريان:</strong> يونيو 2026</p>
+
+    <h2>1. قبول الشروط</h2>
+    <p>باستخدامك لتطبيق "الصانع الحرفي"، فإنك توافق على الالتزام بشروط الاستخدام هذه. إذا كنت لا توافق على هذه الشروط، يُرجى عدم استخدام التطبيق.</p>
+
+    <h2>2. استخدام التطبيق</h2>
+    <p>يجوز لك استخدام التطبيق فقط للأغراض الشخصية والمهنية والقانونية. يجب ألا تستخدمه في أي أنشطة غير قانونية أو ضارة أو غير مصرح بها. يعمل التطبيق حصرياً كمنصة لربط الزبائن بالحرفيين.</p>
+
+    <h2>3. حساب المستخدم</h2>
+    <p>أنت مسؤول عن الحفاظ على سرية بيانات الدخول الخاصة بك وعن جميع الأنشطة التي تحدث تحت حسابك. يستخدم التطبيق نظام حساب مزدوج (حرفي/زبون)، وأنت مسؤول عن سلوكك ودقة المعلومات المقدمة في كلا الوضعين.</p>
+
+    <h2>4. محتوى المستخدم والتواصل</h2>
+    <p>أنت وحدك المسؤول عن البيانات وطلبات العمل والرسائل (النصية والصوتية) التي ترسلها أو تشاركها داخل التطبيق. نحن نعمل فقط كميسر للتواصل بين الحرفيين والزبائن ونخلي مسؤوليتنا عن أي نزاعات أو جودة العمل أو الاتفاقيات المبرمة بين المستخدمين.</p>
+    <p>أنت توافق على التواصل باحترام وعدم مشاركة أي محتوى غير لائق أو مسيء أو غير قانوني عبر نظام الدردشة المدمج.</p>
+
+    <h2>5. الإعلانات</h2>
+    <p>قد يعرض التطبيق إعلانات (مثل اللافتات والإعلانات البينية) مقدمة من خدمات خارجية.</p>
+
+    <h2>6. الملكية الفكرية</h2>
+    <p>التصميم والميزات والبرمجيات الأساسية للتطبيق هي ملكية حصرية لـ مجاهد عبد الرحمان ومحمية بموجب القوانين المعمول بها. ومع ذلك، فإن جميع المحتويات التي ينشئها المستخدم، بما في ذلك بيانات الملف الشخصي وطلبات العمل ومحتوى الدردشة، تبقى ملكية حصرية للمستخدم. لا يجوز لك نسخ أو تعديل أو توزيع أي جزء من برمجيات التطبيق الخاصة بدون إذن مسبق.</p>
+
+    <h2>7. توفر الخدمة</h2>
+    <p>نحن لا نضمن أن التطبيق سيكون متاحاً دائماً أو دون انقطاع أو خالياً من الأخطاء. قد تؤثر عمليات الصيانة أو التحديثات أو المشاكل التقنية على توفر الخدمة.</p>
+
+    <h2>8. إخلاء المسؤولية من الضمانات</h2>
+    <p>يتم توفير التطبيق "كما هو" و"كما هو متاح" دون أي ضمانات من أي نوع، سواء كانت صريحة أو ضمنية. نحن لا نضمن جودة أو سلامة أو قانونية الخدمات التي يقدمها الحرفيون عبر المنصة.</p>
+
+    <h2>9. حدود المسؤولية</h2>
+    <p>لن نكون مسؤولين بأي حال من الأحوال عن أي أضرار مباشرة أو غير مباشرة أو عرضية أو تبعية تنشأ عن استخدام أو عدم القدرة على استخدام التطبيق، أو عن أي تفاعلات أو معاملات بين المستخدمين.</p>
+
+    <h2>10. إنهاء الخدمة</h2>
+    <p>نحتفظ بالحق في تعليق أو إنهاء وصولك إلى التطبيق في أي وقت، دون إشعار مسبق، في حال انتهاك هذه الشروط.</p>
+
+    <h2>11. القانون المعمول به والاختصاص القضائي</h2>
+    <p>تخضع هذه الشروط لقوانين المملكة المغربية. أي نزاع ينشأ عن استخدام التطبيق يخضع للاختصاص الحصري للمحاكم المغربية.</p>
+
+    <h2>12. التعديلات على الشروط</h2>
+    <p>قد نقوم بتحديث هذه الشروط من وقت لآخر. سيتم إبلاغك بالتغييرات داخل التطبيق أو من خلال وسائل أخرى مناسبة.</p>
+
+    <h2>13. سياسة الخصوصية</h2>
+    <p>يخضع استخدامك للتطبيق أيضاً لسياسة الخصوصية الخاصة بنا، والتي تعتبر جزءاً لا يتجزأ من هذه الشروط. يرجى مراجعتها لفهم ممارساتنا المتعلقة بالبيانات.</p>
+
+    <h2>14. للتواصل</h2>
+    <p>مجاهد عبد الرحمان (مطور مستقل)  
+
+    البريد الإلكتروني: <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a></p>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- FRENCH CONTENT                             -->
+  <!-- ========================================== -->
+  <div id="content-fr" class="content-section" dir="ltr">
+    <h1>Conditions d'Utilisation de Al-Sanea Al-Hirafi</h1>
+    <p><strong>Date de prise d'effet :</strong> Juin 2026</p>
+
+    <h2>1. Acceptation des Conditions</h2>
+    <p>En utilisant l'application Al-Sanea Al-Hirafi, vous acceptez de vous conformer à ces Conditions d'Utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser l'application.</p>
+
+    <h2>2. Utilisation de l'Application</h2>
+    <p>Vous pouvez utiliser l'application uniquement à des fins personnelles, professionnelles et légales. Vous ne devez pas l'utiliser pour des activités illégales, nuisibles ou non autorisées. L'application sert uniquement de plateforme pour mettre en relation les clients avec les artisans.</p>
+
+    <h2>3. Compte Utilisateur</h2>
+    <p>Vous êtes responsable du maintien de la confidentialité de vos identifiants de connexion et de toutes les activités qui se produisent sous votre compte. L'application utilise un système de compte double (Artisan/Client), et vous êtes responsable de votre conduite et de l'exactitude des informations fournies dans les deux modes.</p>
+
+    <h2>4. Contenu Utilisateur et Communication</h2>
+    <p>Vous êtes seul responsable des données, des demandes de travail et des messages (texte et audio) que vous soumettez ou partagez dans l'application. Nous agissons uniquement en tant que facilitateur de communication entre les artisans et les clients et déclinons toute responsabilité pour les litiges, la qualité du travail ou les accords conclus entre les utilisateurs.</p>
+    <p>Vous acceptez de communiquer de manière respectueuse et de ne partager aucun contenu inapproprié, offensant ou illégal via le système de chat intégré.</p>
+
+    <h2>5. Publicité</h2>
+    <p>L'application peut afficher des publicités (telles que des bannières et des annonces interstitielles) fournies par des services tiers.</p>
+
+    <h2>6. Propriété Intellectuelle</h2>
+    <p>La conception, les fonctionnalités et le logiciel sous-jacent de l'application sont la propriété exclusive de MOUJAHID ABDERRAHMAN et sont protégés par les lois applicables. Cependant, tout le contenu généré par l'utilisateur, y compris les données de profil, les demandes de travail et le contenu du chat, reste la propriété exclusive de l'utilisateur. Vous ne pouvez pas copier, modifier ou distribuer une quelconque partie du logiciel propriétaire de l'application sans autorisation préalable.</p>
+
+    <h2>7. Disponibilité du Service</h2>
+    <p>Nous ne garantissons pas que l'application sera toujours disponible, ininterrompue ou sans erreur. Les opérations de maintenance, les mises à jour ou les problèmes techniques peuvent affecter la disponibilité du service.</p>
+
+    <h2>8. Exclusion de Garanties</h2>
+    <p>L'application est fournie "telle quelle" et "selon la disponibilité" sans aucune garantie d'aucune sorte, expresse ou implicite. Nous ne garantissons pas la qualité, la sécurité ou la légalité des services offerts par les artisans via la plateforme.</p>
+
+    <h2>9. Limitation de Responsabilité</h2>
+    <p>En aucun cas nous ne serons responsables des dommages directs, indirects, accessoires ou consécutifs découlant de l'utilisation ou de l'impossibilité d'utiliser l'application, ou de toute interaction ou transaction entre les utilisateurs.</p>
+
+    <h2>10. Résiliation</h2>
+    <p>Nous nous réservons le droit de suspendre ou de résilier votre accès à l'application à tout moment, sans préavis, en cas de violation de ces Conditions.</p>
+
+    <h2>11. Loi Applicable et Juridiction</h2>
+    <p>Ces Conditions sont régies par les lois du Royaume du Maroc. Tout litige découlant de l'utilisation de l'application sera soumis à la compétence exclusive des tribunaux marocains.</p>
+
+    <h2>12. Modifications des Conditions</h2>
+    <p>Nous pouvons mettre à jour ces Conditions de temps à autre. Les modifications vous seront communiquées dans l'application ou par d'autres moyens appropriés.</p>
+
+    <h2>13. Politique de Confidentialité</h2>
+    <p>Votre utilisation de l'application est également régie par notre Politique de Confidentialité, qui est intégrée à ces Conditions par référence. Veuillez la consulter pour comprendre nos pratiques en matière de données.</p>
+
+    <h2>14. Contact</h2>
+    <p>MOUJAHID ABDERRAHMAN (Développeur Indépendant)  
+
+    E-mail : <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a></p>
+  </div>
 
 </div>
+
+<!-- كود التبديل بين اللغات -->
+<script>
+  function changeLanguage(lang) {
+    // إخفاء كل النصوص
+    var sections = document.querySelectorAll('.content-section');
+    sections.forEach(function(section) {
+      section.classList.remove('active');
+    });
+    
+    // إزالة التفعيل من كل الأزرار
+    var buttons = document.querySelectorAll('.lang-btn');
+    buttons.forEach(function(btn) {
+      btn.classList.remove('active');
+    });
+    
+    // إظهار النص المطلوب وتفعيل الزر الخاص به
+    document.getElementById('content-' + lang).classList.add('active');
+    event.target.classList.add('active');
+
+    // تغيير اتجاه الصفحة ولغتها الأساسية
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.lang = lang;
+    
+    // تحديث عنوان الصفحة
+    if(lang === 'ar') {
+      document.title = "شروط الاستخدام - الصانع الحرفي";
+    } else if(lang === 'fr') {
+      document.title = "Conditions d'Utilisation - Al-Sanea Al-Hirafi";
+    } else {
+      document.title = "Terms of Service - Al-Sanea Al-Hirafi";
+    }
+  }
+</script>
 
 </body>
 </html>
