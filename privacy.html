@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -47,122 +47,429 @@
   li {
     margin-bottom: 5px;
   }
+  
+  /* --- تنسيقات أزرار اللغة --- */
+  .lang-switcher {
+    text-align: center;
+    margin-bottom: 30px;
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #eee;
+  }
+  .lang-btn {
+    background: white;
+    border: 2px solid #0056b3;
+    color: #0056b3;
+    padding: 8px 20px;
+    margin: 0 5px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 14px;
+    transition: all 0.3s ease;
+  }
+  .lang-btn:hover {
+    background: #e6f0fa;
+  }
+  .lang-btn.active {
+    background: #0056b3;
+    color: white;
+  }
+  
+  /* --- إخفاء وإظهار النصوص --- */
+  .content-section {
+    display: none;
+  }
+  .content-section.active {
+    display: block;
+    animation: fadeIn 0.5s;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  /* تعديل اتجاه القوائم للغة العربية */
+  [dir="rtl"] ul {
+    padding-left: 0;
+    padding-right: 20px;
+  }
 </style>
 </head>
 <body>
 
 <div class="container">
-  <h1>Privacy Policy of Al-Sanea Al-Hirafi (الصانع الحرفي)</h1>
-  <p><strong>Effective Date:</strong> June 2026</p>
-
-  <h2>1. Identity of the Data Controller</h2>
-  <p><strong>Data Controller:</strong> MOUJAHID ABDERRAHMAN (Independent Developer)   
-
-  <strong>Country:</strong> Morocco   
-
-  I act as the data controller for the personal data processed via the Al-Sanea Al-Hirafi mobile application.   
-
-  <strong>Contact:</strong> <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a></p>
-
-  <h2>2. Applicable Law</h2>
-  <p>This Privacy Policy is governed by Moroccan law, in particular Law No. 09-08 relating to the protection of individuals with regard to the processing of personal data.   
-
-  Any dispute will fall under the jurisdiction of the Moroccan courts.</p>
-
-  <h2>3. Scope of Application</h2>
-  <p>This Policy explains how your data is collected, used, and protected when you use the Al-Sanea Al-Hirafi mobile application.   
-
-  By using the Application, you agree to this Policy.</p>
-
-  <h2>4. Data Collected</h2>
   
-  <h3>4.1 Data provided by the user</h3>
-  <ul>
-    <li>Account information (full name, phone number, email address).</li>
-    <li>Professional profile (profession, primary city, notification cities).</li>
-    <li>User-generated content (work requests, text and audio messages in the built-in chat).</li>
-  </ul>
+  <!-- أزرار تغيير اللغة -->
+  <div class="lang-switcher">
+    <button class="lang-btn" onclick="changeLanguage('ar')">العربية</button>
+    <button class="lang-btn" onclick="changeLanguage('fr')">Français</button>
+    <button class="lang-btn active" onclick="changeLanguage('en')">English</button>
+  </div>
 
-  <h3>4.2 Authentication (Google Sign-In)</h3>
-  <p>We use secure authentication systems, including Google Sign-In. When you choose to authenticate using these third-party services, we only receive basic profile data (specifically your name and email address) from the service provider to create and manage your account.</p>
+  <!-- ========================================== -->
+  <!-- ENGLISH CONTENT (Default)                  -->
+  <!-- ========================================== -->
+  <div id="content-en" class="content-section active" dir="ltr">
+    <h1>Privacy Policy of Al-Sanea Al-Hirafi (الصانع الحرفي)</h1>
+    <p><strong>Effective Date:</strong> June 2026</p>
 
-  <h3>4.3 Photos and Media</h3>
-  <p>The application only collects the profile photo chosen by the user and audio messages sent via the built-in chat to facilitate communication between artisans and clients. The application does not collect or store any images of products or goods.</p>
+    <h2>1. Identity of the Data Controller</h2>
+    <p><strong>Data Controller:</strong> MOUJAHID ABDERRAHMAN (Independent Developer)  
 
-  <h3>4.4 Location Data (Manual Selection)</h3>
-  <p><strong>The application does not use GPS or your device's location services under any circumstances.</strong>  
+    <strong>Country:</strong> Morocco  
 
-  Location data (primary city and notification cities) are manually selected by the user from a predefined list built into the application. This information is used exclusively for the smart filtering system to connect clients and artisans in the same region.</p>
+    I act as the data controller for the personal data processed via the Al-Sanea Al-Hirafi mobile application.  
 
-  <h3>4.5 Automatically collected data</h3>
-  <p>We may collect:</p>
-  <ul>
-    <li>Crash reports.</li>
-    <li>Device information (model, operating system, application version).</li>
-    <li>Technical logs for performance and debugging.</li>
-  </ul>
+    <strong>Contact:</strong> <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a></p>
 
-  <h2>5. Purposes of Processing</h2>
-  <p>Your data is used to:</p>
-  <ul>
-    <li>Create and manage your user account (dual profile: artisan/client).</li>
-    <li>Filter and display artisans or work requests according to the selected profession and city.</li>
-    <li>Facilitate direct communication via the built-in chat system (text and audio).</li>
-    <li>Store and synchronize your data securely.</li>
-    <li>Improve the performance and reliability of the application.</li>
-    <li>Display advertisements (banners and interstitials).</li>
-  </ul>
+    <h2>2. Applicable Law</h2>
+    <p>This Privacy Policy is governed by Moroccan law, in particular Law No. 09-08 relating to the protection of individuals with regard to the processing of personal data. Any dispute will fall under the jurisdiction of the Moroccan courts.</p>
 
-  <h2>6. Legal Basis</h2>
-  <p>The processing is based on:</p>
-  <ul>
-    <li>The express consent of the user.</li>
-    <li>The necessity for the provision of the matchmaking service.</li>
-    <li>Legitimate interest (improvement and security of the application).</li>
-    <li>Legal obligations where applicable.</li>
-  </ul>
+    <h2>3. Scope of Application</h2>
+    <p>This Policy explains how your data is collected, used, and protected when you use the Al-Sanea Al-Hirafi mobile application. By using the Application, you agree to this Policy.</p>
 
-  <h2>7. Data Storage and Hosting</h2>
-  <p><strong>Local Storage:</strong> Your data (such as messages and audio files) is cached locally on your device to improve speed and reduce data consumption.</p>
-  <p>Your data is hosted via Supabase, which acts as a data processor according to our instructions. The data is hosted on secure servers. Data transfers outside Morocco are carried out in accordance with applicable legal guarantees and CNDP deliberations.</p>
+    <h2>4. Data Collected</h2>
+    <h3>4.1 Data provided by the user</h3>
+    <ul>
+      <li>Account information (full name, phone number, email address).</li>
+      <li>Professional profile (profession, primary city, notification cities).</li>
+      <li>User-generated content (work requests, text and audio messages in the built-in chat).</li>
+    </ul>
 
-  <h2>8. Data Sharing</h2>
-  <p>We do not sell your data. We may share data with:</p>
-  <ul>
-    <li>Supabase (backend services, database, and authentication).</li>
-    <li>Google AdMob (advertising services for displaying banners and interstitial ads).</li>
-  </ul>
+    <h3>4.2 Authentication (Google Sign-In)</h3>
+    <p>We use secure authentication systems, including Google Sign-In. When you choose to authenticate using these third-party services, we only receive basic profile data (specifically your name and email address) from the service provider to create and manage your account.</p>
 
-  <h2>9. Data Retention</h2>
-  <p>We only retain your data for the time necessary to:</p>
-  <ul>
-    <li>Provide the matchmaking and communication service.</li>
-    <li>Comply with legal obligations.</li>
-  </ul>
+    <h3>4.3 Photos and Media</h3>
+    <p>The application only collects the profile photo chosen by the user and audio messages sent via the built-in chat to facilitate communication between artisans and clients. The application does not collect or store any images of products or goods.</p>
 
-  <h2>10. Your Rights and Data Deletion</h2>
-  <p>In accordance with Moroccan law (Law 09-08), you have the following rights:</p>
-  <ul>
-    <li>Right of access to your data.</li>
-    <li>Right of rectification.</li>
-    <li>Right of erasure (deletion).</li>
-    <li>Right to object to processing.</li>
-  </ul>
-  <p><strong>Account and data deletion:</strong> You can permanently delete your account and all associated data (profile, messages, requests) directly from the application by going to <strong>Settings > Request account deletion</strong>. You can also request deletion by contacting us at <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a>.</p>
+    <h3>4.4 Location Data (Manual Selection)</h3>
+    <p><strong>The application does not use GPS or your device's location services under any circumstances.</strong> Location data (primary city and notification cities) are manually selected by the user from a predefined list built into the application. This information is used exclusively for the smart filtering system to connect clients and artisans in the same region.</p>
 
-  <h2>11. Security</h2>
-  <p>We implement appropriate security measures, including:</p>
-  <ul>
-    <li>Secure authentication (JWT).</li>
-    <li>Row Level Security (RLS) to ensure that your messages and private data are only accessible to you and your chat partners.</li>
-    <li>HTTPS/TLS encryption.</li>
-  </ul>
+    <h3>4.5 Automatically collected data</h3>
+    <p>We may collect:</p>
+    <ul>
+      <li>Crash reports.</li>
+      <li>Device information (model, operating system, application version).</li>
+      <li>Technical logs for performance and debugging.</li>
+    </ul>
 
-  <h2>12. Contact</h2>
-  <p>MOUJAHID ABDERRAHMAN   
+    <h2>5. Purposes of Processing</h2>
+    <p>Your data is used to:</p>
+    <ul>
+      <li>Create and manage your user account (dual profile: artisan/client).</li>
+      <li>Filter and display artisans or work requests according to the selected profession and city.</li>
+      <li>Facilitate direct communication via the built-in chat system (text and audio).</li>
+      <li>Store and synchronize your data securely.</li>
+      <li>Improve the performance and reliability of the application.</li>
+      <li>Display advertisements (banners and interstitials).</li>
+    </ul>
 
-  Email: <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a></p>
+    <h2>6. Legal Basis</h2>
+    <p>The processing is based on:</p>
+    <ul>
+      <li>The express consent of the user.</li>
+      <li>The necessity for the provision of the matchmaking service.</li>
+      <li>Legitimate interest (improvement and security of the application).</li>
+      <li>Legal obligations where applicable.</li>
+    </ul>
+
+    <h2>7. Data Storage and Hosting</h2>
+    <p><strong>Local Storage:</strong> Your data (such as messages and audio files) is cached locally on your device to improve speed and reduce data consumption.</p>
+    <p>Your data is hosted via Supabase, which acts as a data processor according to our instructions. The data is hosted on secure servers. Data transfers outside Morocco are carried out in accordance with applicable legal guarantees and CNDP deliberations.</p>
+
+    <h2>8. Data Sharing</h2>
+    <p>We do not sell your data. We may share data with:</p>
+    <ul>
+      <li>Supabase (backend services, database, and authentication).</li>
+      <li>Google AdMob (advertising services for displaying banners and interstitial ads).</li>
+    </ul>
+
+    <h2>9. Data Retention</h2>
+    <p>We only retain your data for the time necessary to:</p>
+    <ul>
+      <li>Provide the matchmaking and communication service.</li>
+      <li>Comply with legal obligations.</li>
+    </ul>
+
+    <h2>10. Your Rights and Data Deletion</h2>
+    <p>In accordance with Moroccan law (Law 09-08), you have the following rights:</p>
+    <ul>
+      <li>Right of access to your data.</li>
+      <li>Right of rectification.</li>
+      <li>Right of erasure (deletion).</li>
+      <li>Right to object to processing.</li>
+    </ul>
+    <p><strong>Account and data deletion:</strong> You can permanently delete your account and all associated data (profile, messages, requests) directly from the application by going to <strong>Settings > Request account deletion</strong>. You can also request deletion by contacting us at <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a>.</p>
+
+    <h2>11. Security</h2>
+    <p>We implement appropriate security measures, including:</p>
+    <ul>
+      <li>Secure authentication (JWT).</li>
+      <li>Row Level Security (RLS) to ensure that your messages and private data are only accessible to you and your chat partners.</li>
+      <li>HTTPS/TLS encryption.</li>
+    </ul>
+
+    <h2>12. Contact</h2>
+    <p>MOUJAHID ABDERRAHMAN  
+
+    Email: <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a></p>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- ARABIC CONTENT                             -->
+  <!-- ========================================== -->
+  <div id="content-ar" class="content-section" dir="rtl">
+    <h1>سياسة خصوصية تطبيق الصانع الحرفي</h1>
+    <p><strong>تاريخ السريان:</strong> يونيو 2026</p>
+
+    <h2>1. هوية المسؤول عن المعالجة</h2>
+    <p><strong>المسؤول عن المعالجة:</strong> مجاهد عبد الرحمان (مطور مستقل)  
+
+    <strong>البلد:</strong> المغرب  
+
+    أعمل كمسؤول عن معالجة البيانات الشخصية التي تتم عبر تطبيق الهاتف المحمول "الصانع الحرفي".  
+
+    <strong>للتواصل:</strong> <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a></p>
+
+    <h2>2. القانون المعمول به</h2>
+    <p>تخضع سياسة الخصوصية هذه للقانون المغربي، وتحديداً القانون رقم 09-08 المتعلق بحماية الأشخاص الذاتيين تجاه معالجة المعطيات ذات الطابع الشخصي. أي نزاع سيخضع لاختصاص المحاكم المغربية.</p>
+
+    <h2>3. نطاق التطبيق</h2>
+    <p>تشرح هذه السياسة كيف يتم جمع بياناتك واستخدامها وحمايتها عند استخدامك لتطبيق "الصانع الحرفي". باستخدامك للتطبيق، فإنك توافق على هذه السياسة.</p>
+
+    <h2>4. البيانات المجمعة</h2>
+    <h3>4.1 البيانات المقدمة من المستخدم</h3>
+    <ul>
+      <li>معلومات الحساب (الاسم الكامل، رقم الهاتف، البريد الإلكتروني).</li>
+      <li>الملف المهني (المهنة، المدينة الرئيسية، مدن الإشعارات).</li>
+      <li>المحتوى الذي ينشئه المستخدم (طلبات العمل، الرسائل النصية والصوتية في الدردشة المدمجة).</li>
+    </ul>
+
+    <h3>4.2 المصادقة (تسجيل الدخول عبر Google)</h3>
+    <p>نحن نستخدم أنظمة مصادقة آمنة، بما في ذلك تسجيل الدخول عبر Google. عندما تختار المصادقة باستخدام هذه الخدمات الخارجية، فإننا نتلقى فقط بيانات الملف الشخصي الأساسية (تحديداً اسمك وبريدك الإلكتروني) من مزود الخدمة لإنشاء وإدارة حسابك.</p>
+
+    <h3>4.3 الصور والوسائط</h3>
+    <p>يجمع التطبيق فقط الصورة الشخصية التي يختارها المستخدم والرسائل الصوتية المرسلة عبر الدردشة المدمجة لتسهيل التواصل بين الحرفيين والزبائن. لا يقوم التطبيق بجمع أو تخزين أي صور للمنتجات أو السلع.</p>
+
+    <h3>4.4 بيانات الموقع (اختيار يدوي)</h3>
+    <p><strong>لا يستخدم التطبيق نظام تحديد المواقع (GPS) أو خدمات الموقع الخاصة بجهازك تحت أي ظرف من الظروف.</strong> يتم تحديد بيانات الموقع (المدينة الرئيسية ومدن الإشعارات) يدوياً من قبل المستخدم من خلال قائمة محددة مسبقاً مدمجة في التطبيق. تُستخدم هذه المعلومات حصرياً لنظام الفلترة الذكي لربط الزبائن والحرفيين في نفس المنطقة.</p>
+
+    <h3>4.5 البيانات المجمعة تلقائياً</h3>
+    <p>قد نقوم بجمع:</p>
+    <ul>
+      <li>تقارير الأعطال (Crash reports).</li>
+      <li>معلومات الجهاز (الطراز، نظام التشغيل، إصدار التطبيق).</li>
+      <li>السجلات التقنية (Logs) للأداء وإصلاح الأخطاء.</li>
+    </ul>
+
+    <h2>5. أغراض المعالجة</h2>
+    <p>تُستخدم بياناتك من أجل:</p>
+    <ul>
+      <li>إنشاء وإدارة حساب المستخدم الخاص بك (ملف مزدوج: حرفي/زبون).</li>
+      <li>فلترة وعرض الحرفيين أو طلبات العمل وفقاً للمهنة والمدينة المحددة.</li>
+      <li>تسهيل التواصل المباشر عبر نظام الدردشة المدمج (نصي وصوتي).</li>
+      <li>تخزين ومزامنة بياناتك بشكل آمن.</li>
+      <li>تحسين أداء وموثوقية التطبيق.</li>
+      <li>عرض الإعلانات (اللافتات والإعلانات البينية).</li>
+    </ul>
+
+    <h2>6. الأساس القانوني</h2>
+    <p>تعتمد المعالجة على:</p>
+    <ul>
+      <li>الموافقة الصريحة للمستخدم.</li>
+      <li>الضرورة لتقديم خدمة الربط والتواصل.</li>
+      <li>المصلحة المشروعة (تحسين وأمان التطبيق).</li>
+      <li>الالتزامات القانونية حيثما ينطبق ذلك.</li>
+    </ul>
+
+    <h2>7. تخزين واستضافة البيانات</h2>
+    <p><strong>التخزين المحلي:</strong> يتم تخزين بياناتك (مثل الرسائل والملفات الصوتية) مؤقتاً (Cache) على جهازك لتحسين السرعة وتقليل استهلاك البيانات.</p>
+    <p>تُستضاف بياناتك عبر منصة Supabase، والتي تعمل كمعالج للبيانات وفقاً لتعليماتنا. تُستضاف البيانات على خوادم آمنة. تتم عمليات نقل البيانات خارج المغرب وفقاً للضمانات القانونية المعمول بها ومقررات اللجنة الوطنية (CNDP).</p>
+
+    <h2>8. مشاركة البيانات</h2>
+    <p>نحن لا نبيع بياناتك. قد نشارك البيانات مع:</p>
+    <ul>
+      <li>Supabase (الخدمات الخلفية، قاعدة البيانات، والمصادقة).</li>
+      <li>Google AdMob (خدمات إعلانية لعرض اللافتات والإعلانات البينية).</li>
+    </ul>
+
+    <h2>9. الاحتفاظ بالبيانات</h2>
+    <p>نحتفظ ببياناتك فقط للوقت اللازم من أجل:</p>
+    <ul>
+      <li>تقديم خدمة الربط والتواصل.</li>
+      <li>الامتثال للالتزامات القانونية.</li>
+    </ul>
+
+    <h2>10. حقوقك وحذف البيانات</h2>
+    <p>وفقاً للقانون المغربي (القانون 09-08)، يحق لك ما يلي:</p>
+    <ul>
+      <li>حق الولوج إلى بياناتك.</li>
+      <li>حق التصحيح.</li>
+      <li>حق المحو (الحذف).</li>
+      <li>حق الاعتراض على المعالجة.</li>
+    </ul>
+    <p><strong>حذف الحساب والبيانات:</strong> يمكنك حذف حسابك وكافة البيانات المرتبطة به نهائياً (الملف الشخصي، الرسائل، الطلبات) مباشرة من التطبيق بالذهاب إلى <strong>الإعدادات > طلب حذف الحساب</strong>. يمكنك أيضاً طلب الحذف عبر مراسلتنا على <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a>.</p>
+
+    <h2>11. الأمان</h2>
+    <p>نحن نطبق تدابير أمنية مناسبة، بما في ذلك:</p>
+    <ul>
+      <li>المصادقة الآمنة (JWT).</li>
+      <li>الأمان على مستوى الصف (RLS) لضمان أن رسائلك وبياناتك الخاصة لا يمكن الوصول إليها إلا من قبلك ومن قبل شركائك في الدردشة.</li>
+      <li>تشفير HTTPS/TLS.</li>
+    </ul>
+
+    <h2>12. للتواصل</h2>
+    <p>مجاهد عبد الرحمان  
+
+    البريد الإلكتروني: <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a></p>
+  </div>
+
+  <!-- ========================================== -->
+  <!-- FRENCH CONTENT                             -->
+  <!-- ========================================== -->
+  <div id="content-fr" class="content-section" dir="ltr">
+    <h1>Politique de Confidentialité de Al-Sanea Al-Hirafi</h1>
+    <p><strong>Date de prise d'effet :</strong> Juin 2026</p>
+
+    <h2>1. Identité du Responsable de Traitement</h2>
+    <p><strong>Responsable de Traitement :</strong> MOUJAHID ABDERRAHMAN (Développeur Indépendant)  
+
+    <strong>Pays :</strong> Maroc  
+
+    J'agis en tant que responsable de traitement pour les données personnelles traitées via l'application mobile Al-Sanea Al-Hirafi.  
+
+    <strong>Contact :</strong> <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a></p>
+
+    <h2>2. Loi Applicable</h2>
+    <p>La présente Politique de Confidentialité est régie par le droit marocain, notamment la Loi n° 09-08 relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel. Tout litige relèvera de la compétence des tribunaux marocains.</p>
+
+    <h2>3. Champ d'Application</h2>
+    <p>Cette Politique explique comment vos données sont collectées, utilisées et protégées lorsque vous utilisez l'application mobile Al-Sanea Al-Hirafi. En utilisant l'Application, vous acceptez cette Politique.</p>
+
+    <h2>4. Données Collectées</h2>
+    <h3>4.1 Données fournies par l'utilisateur</h3>
+    <ul>
+      <li>Informations de compte (nom complet, numéro de téléphone, adresse e-mail).</li>
+      <li>Profil professionnel (profession, ville principale, villes de notification).</li>
+      <li>Contenu généré par l'utilisateur (demandes de travail, messages texte et audio dans le chat intégré).</li>
+    </ul>
+
+    <h3>4.2 Authentification (Google Sign-In)</h3>
+    <p>Nous utilisons des systèmes d'authentification sécurisés, y compris Google Sign-In. Lorsque vous choisissez de vous authentifier à l'aide de ces services tiers, nous recevons uniquement les données de profil de base (spécifiquement votre nom et votre adresse e-mail) du fournisseur de services pour créer et gérer votre compte.</p>
+
+    <h3>4.3 Photos et Médias</h3>
+    <p>L'application collecte uniquement la photo de profil choisie par l'utilisateur et les messages audio envoyés via le chat intégré pour faciliter la communication entre les artisans et les clients. L'application ne collecte ni ne stocke aucune image de produits ou de marchandises.</p>
+
+    <h3>4.4 Données de localisation (Sélection manuelle)</h3>
+    <p><strong>L'application n'utilise en aucun cas le GPS ou les services de localisation de votre appareil.</strong> Les données de localisation (ville principale et villes de notification) sont sélectionnées manuellement par l'utilisateur à partir d'une liste prédéfinie intégrée à l'application. Ces informations sont utilisées exclusivement pour le système de filtrage intelligent afin de mettre en relation les clients et les artisans de la même région.</p>
+
+    <h3>4.5 Données collectées automatiquement</h3>
+    <p>Nous pouvons collecter :</p>
+    <ul>
+      <li>Rapports de plantage (Crash reports).</li>
+      <li>Informations sur l'appareil (modèle, système d'exploitation, version de l'application).</li>
+      <li>Journaux techniques (Logs) pour les performances et le débogage.</li>
+    </ul>
+
+    <h2>5. Finalités du Traitement</h2>
+    <p>Vos données sont utilisées pour :</p>
+    <ul>
+      <li>Créer et gérer votre compte utilisateur (profil double : artisan/client).</li>
+      <li>Filtrer et afficher les artisans ou les demandes de travail selon la profession et la ville sélectionnées.</li>
+      <li>Faciliter la communication directe via le système de chat intégré (texte et audio).</li>
+      <li>Stocker et synchroniser vos données en toute sécurité.</li>
+      <li>Améliorer les performances et la fiabilité de l'application.</li>
+      <li>Afficher des publicités (bannières et interstitiels).</li>
+    </ul>
+
+    <h2>6. Base Légale</h2>
+    <p>Le traitement est basé sur :</p>
+    <ul>
+      <li>Le consentement exprès de l'utilisateur.</li>
+      <li>La nécessité pour la fourniture du service de mise en relation.</li>
+      <li>L'intérêt légitime (amélioration et sécurité de l'application).</li>
+      <li>Les obligations légales le cas échéant.</li>
+    </ul>
+
+    <h2>7. Stockage et Hébergement des Données</h2>
+    <p><strong>Stockage Local :</strong> Vos données (telles que les messages et les fichiers audio) sont mises en cache localement sur votre appareil pour améliorer la vitesse et réduire la consommation de données.</p>
+    <p>Vos données sont hébergées via Supabase, qui agit en tant que sous-traitant selon nos instructions. Les données sont hébergées sur des serveurs sécurisés. Les transferts de données hors du Maroc sont effectués conformément aux garanties légales applicables et aux délibérations de la CNDP.</p>
+
+    <h2>8. Partage des Données</h2>
+    <p>Nous ne vendons pas vos données. Nous pouvons partager des données avec :</p>
+    <ul>
+      <li>Supabase (services backend, base de données et authentification).</li>
+      <li>Google AdMob (services publicitaires pour l'affichage de bannières et d'annonces interstitielles).</li>
+    </ul>
+
+    <h2>9. Conservation des Données</h2>
+    <p>Nous ne conservons vos données que le temps nécessaire pour :</p>
+    <ul>
+      <li>Fournir le service de mise en relation et de communication.</li>
+      <li>Se conformer aux obligations légales.</li>
+    </ul>
+
+    <h2>10. Vos Droits et Suppression des Données</h2>
+    <p>Conformément à la loi marocaine (Loi 09-08), vous disposez des droits suivants :</p>
+    <ul>
+      <li>Droit d'accès à vos données.</li>
+      <li>Droit de rectification.</li>
+      <li>Droit d'effacement (suppression).</li>
+      <li>Droit d'opposition au traitement.</li>
+    </ul>
+    <p><strong>Suppression du compte et des données :</strong> Vous pouvez supprimer définitivement votre compte et toutes les données associées (profil, messages, demandes) directement depuis l'application en allant dans <strong>Paramètres > Demander la suppression du compte</strong>. Vous pouvez également demander la suppression en nous contactant à <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a>.</p>
+
+    <h2>11. Sécurité</h2>
+    <p>Nous mettons en œuvre des mesures de sécurité appropriées, notamment :</p>
+    <ul>
+      <li>Authentification sécurisée (JWT).</li>
+      <li>Sécurité au niveau des lignes (RLS) pour garantir que vos messages et données privées ne sont accessibles qu'à vous et à vos partenaires de chat.</li>
+      <li>Chiffrement HTTPS/TLS.</li>
+    </ul>
+
+    <h2>12. Contact</h2>
+    <p>MOUJAHID ABDERRAHMAN  
+
+    E-mail : <a href="mailto:awrghise@gmail.com">awrghise@gmail.com</a></p>
+  </div>
 
 </div>
+
+<!-- كود التبديل بين اللغات -->
+<script>
+  function changeLanguage(lang) {
+    // إخفاء كل النصوص
+    var sections = document.querySelectorAll('.content-section');
+    sections.forEach(function(section) {
+      section.classList.remove('active');
+    });
+    
+    // إزالة التفعيل من كل الأزرار
+    var buttons = document.querySelectorAll('.lang-btn');
+    buttons.forEach(function(btn) {
+      btn.classList.remove('active');
+    });
+    
+    // إظهار النص المطلوب وتفعيل الزر الخاص به
+    document.getElementById('content-' + lang).classList.add('active');
+    event.target.classList.add('active');
+
+    // تغيير اتجاه الصفحة ولغتها الأساسية
+    document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+    document.documentElement.lang = lang;
+    
+    // تحديث عنوان الصفحة (اختياري)
+    if(lang === 'ar') {
+      document.title = "سياسة الخصوصية - الصانع الحرفي";
+    } else if(lang === 'fr') {
+      document.title = "Politique de Confidentialité - Al-Sanea Al-Hirafi";
+    } else {
+      document.title = "Privacy Policy - Al-Sanea Al-Hirafi";
+    }
+  }
+</script>
+
 </body>
 </html>
